@@ -3,4 +3,7 @@ numpy
 seaborn
 tqdm
 matplotlib
+sklearn
+catboost
+xgboost
 -e .
