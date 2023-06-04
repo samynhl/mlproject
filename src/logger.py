@@ -14,12 +14,5 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-logging.basicConfig(
-    filename=LOG_FILE_PATH,
-    format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
-    level=logging.CRITICAL
-)
-
-
-if __name__=="__main__":
-    logging.info("Hello World")
+# if __name__=="__main__":
+#     logging.info("Hello World")
