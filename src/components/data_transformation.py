@@ -109,6 +109,8 @@ class DataTransformation:
                 obj = preprocessing_obj
             )
 
+            logging.info("Preprocessor object saved successfully")
+
             return(
                 train_arr,
                 test_arr, 

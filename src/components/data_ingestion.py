@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass, field
 
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
@@ -44,9 +45,14 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e, sys)
         
-if __name__ == '__main__':
-    obj = DataIngestion()
-    train_data, test_data = obj.initiate_data_ingestion()
+# if __name__ == '__main__':
+#     obj = DataIngestion()
+#     train_data, test_data = obj.initiate_data_ingestion()
 
-    data_transformations = DataTransformation()
-    data_transformations.initiate_data_transformation(train_data, test_data)
+#     data_transformations = DataTransformation()
+#     train_arr,test_arr,preprocessor_path = data_transformations.initiate_data_transformation(train_data, test_data)
+
+#     model_trainer = ModelTrainer()
+#     score = model_trainer.initiate_model_trainer(train_arr, test_arr, preprocessor_path)
+
+#     print(f'R2 Score on the test set: {round(score,4)*100}')
